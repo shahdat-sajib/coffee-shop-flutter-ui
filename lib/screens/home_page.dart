@@ -55,12 +55,16 @@ class _HomePageState extends State<HomePage> {
           ),),
 
           const SizedBox(height: 25,),
-
+          ///////////////search bar
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: TextField(
               decoration: InputDecoration(
-                focusedBorder: const OutlineInputBorder(),
+                prefixIcon: Icon(Icons.search),
+                hintText: 'Find your favourite coffee..',
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey.shade600),
+                ),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey.shade600),
                 )
