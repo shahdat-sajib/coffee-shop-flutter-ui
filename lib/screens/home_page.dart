@@ -49,15 +49,24 @@ class _HomePageState extends State<HomePage> {
       // ignore: prefer_const_literals_to_create_immutables
       bottomNavigationBar: BottomNavigationBar(items: [
         const BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: Icon(Icons.home),
+          ),
           label: '',
         ),
         const BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
+          icon: Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: Icon(Icons.favorite),
+          ),
           label: '',
         ),
         const BottomNavigationBarItem(
-          icon: Icon(Icons.notifications),
+          icon: Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: Icon(Icons.notifications),
+          ),
           label: '',
         ),
 
@@ -113,7 +122,21 @@ class _HomePageState extends State<HomePage> {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                CoffeeTile(),
+                CoffeeTile(
+                  coffeeImagePath: 'lib/images/cup-1.jpg', 
+                  coffeeName: 'Capuccino', 
+                  coffeePrice: '11.00',
+                ),
+                CoffeeTile(
+                  coffeeImagePath: 'lib/images/cup-2.jpg', 
+                  coffeeName: 'Latte', 
+                  coffeePrice: '9.00',
+                ),
+                CoffeeTile(
+                  coffeeImagePath: 'lib/images/cup-3.jpg', 
+                  coffeeName: 'Sugar Free Coffee', 
+                  coffeePrice: '10.00',
+                ),
                 
             ],),
           )
