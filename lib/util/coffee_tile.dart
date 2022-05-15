@@ -9,7 +9,7 @@ class CoffeeTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 25.0, bottom: 25),
       child: Container(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         width: 200,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
@@ -38,6 +38,24 @@ class CoffeeTile extends StatelessWidget {
                     'With Almond Milk',
                     style: TextStyle(color: Colors.grey[700]),
                   ),
+                ],
+              ),
+            ),
+
+            // price section
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                 Text('\$4.00'),
+                  Container(
+                    padding: EdgeInsets.all(4),
+                    decoration: BoxDecoration(color: Colors.orange,
+                    borderRadius: BorderRadius.circular(6)),
+                    
+                    child: const Icon(Icons.add),
+                    ),
                 ],
               ),
             )
