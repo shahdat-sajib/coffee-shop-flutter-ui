@@ -1,3 +1,4 @@
+import 'package:coffee_shop_ui/util/coffee_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -71,6 +72,21 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+
+          SizedBox(height: 25.0,),
+
+          ///////////coffee tiles start...............
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                CoffeeTile(),
+                CoffeeTile(),
+                CoffeeTile(),
+                CoffeeTile(),
+                CoffeeTile(),
+            ],),
+          )
         ],
       ),
     );
